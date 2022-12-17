@@ -8,11 +8,11 @@ public class LeapYearGUI extends JFrame {
     private JButton btnCheckYear;
 
     public static void main(String[] args) {
-        LeapYearGUI app = new LeapYearGUI();
-        app.setTitle("Leap Year Checker");
-        app.setContentPane(app.panel1);
-        app.setSize(1280, 720);
-        app.setDefaultCloseOperation(EXIT_ON_CLOSE);
-        app.setVisible(true);
+        LeapYearGUI Zane = new LeapYearGUI();
+        Zane.setTitle("Leap Year Checker");
+        Zane.setContentPane(Zane.panel1);
+        Zane.setSize(1280, 720);
+        Zane.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        Zane.setVisible(true);
     }
 }
