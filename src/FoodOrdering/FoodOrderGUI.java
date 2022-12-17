@@ -2,6 +2,7 @@ package FoodOrdering;
 
 import javax.swing.*;
 
+
 public class FoodOrderGUI extends JFrame{
     private JPanel panel1;
     private JCheckBox cPizza;
@@ -18,11 +19,11 @@ public class FoodOrderGUI extends JFrame{
 
 
     public static void main(String[] args) {
-        FoodOrderGUI app = new FoodOrderGUI();
-        app.setTitle("Food Ordering System");
-        app.setContentPane(app.panel1);
-        app.setSize(1300, 800);
-        app.setDefaultCloseOperation(EXIT_ON_CLOSE);
-        app.setVisible(true);
+        FoodOrderGUI Zane = new FoodOrderGUI();
+        Zane.setTitle("Food Ordering System");
+        Zane.setContentPane(Zane.panel1);
+        Zane.setSize(1300, 800);
+        Zane.setDefaultCloseOperation(EXIT_ON_CLOSE);
+        Zane.setVisible(true);
     }
 }
