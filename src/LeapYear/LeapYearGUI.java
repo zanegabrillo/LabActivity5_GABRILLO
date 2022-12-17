@@ -11,6 +11,7 @@ public class LeapYearGUI extends JFrame {
     public LeapYearGUI() {
         btnCheckYear.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
+                try {
                     String IYear = tfYear.getText();
                     int year = Integer.parseInt(IYear);
                     if (((year % 4 == 0) && (year % 100!= 0)) || (year%400 == 0)){
@@ -22,7 +23,11 @@ public class LeapYearGUI extends JFrame {
                     else {
                         JOptionPane.showMessageDialog(panel1, "Not a Leap Year");
                     }
-
+                } catch (NullPointerException | NumberFormatException error) {
+                    JOptionPane.showMessageDialog(null, "Please enter a correct year");
+                } catch(IllegalArgumentException error2){
+                    JOptionPane.showMessageDialog(null, error2.getMessage());
+                }
             }
         });
     }
