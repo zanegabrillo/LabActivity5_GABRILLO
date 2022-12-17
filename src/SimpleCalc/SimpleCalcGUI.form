@@ -52,7 +52,10 @@
             <properties>
               <font size="16"/>
               <model>
-                <item value="+, -, *, /"/>
+                <item value="+"/>
+                <item value="-"/>
+                <item value="*"/>
+                <item value="/"/>
               </model>
             </properties>
           </component>
