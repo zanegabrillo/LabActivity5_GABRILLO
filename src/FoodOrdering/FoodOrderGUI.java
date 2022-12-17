@@ -1,7 +1,8 @@
 package FoodOrdering;
 
 import javax.swing.*;
-
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class FoodOrderGUI extends JFrame{
     private JPanel panel1;
@@ -17,7 +18,79 @@ public class FoodOrderGUI extends JFrame{
     private JRadioButton rb10;
     private JRadioButton rb15;
 
+    public FoodOrderGUI(){
+        btnOrder.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
 
+                    ButtonGroup group = new ButtonGroup();
+                    group.add(rbNone);
+                    group.add(rb5);
+                    group.add(rb10);
+                    group.add(rb15);
+
+                    boolean selectbox = false;
+                    double price = 0;
+
+
+                    if (cPizza.isSelected()) {
+                        selectbox= true;
+                        price += 100;
+
+                    }
+                    if (cBurger.isSelected()) {
+                        selectbox = true;
+                        price += 80;
+
+                    }
+                    if (cFries.isSelected()) {
+                        selectbox = true;
+                        price += 65;
+                    }
+                    if (cSoftDrinks.isSelected()) {
+                        selectbox= true;
+                        price += 55;
+
+                    }
+                    if (cTea.isSelected()) {
+                        selectbox = true;
+                        price += 50;
+
+                    }
+                    if (cSundae.isSelected()) {
+                        selectbox = true;
+                        price += 40;
+
+                    }
+
+                    if (rbNone.isSelected()) {
+                        selectbox = true;
+                        price = price;
+
+                    }
+                    if (rb5.isSelected()) {
+                        selectbox = true;
+                        double disprice = price * 0.05;
+                        price = price - disprice;
+
+                    }
+                    if (rb10.isSelected()) {
+                        selectbox = true;
+                        double disprice = price * 0.10;
+                        price = price - disprice;
+
+                    }
+                    if (rb15.isSelected()) {
+                        selectbox = true;
+                        double  disprice = price * 0.15;
+                        price = price - disprice;
+
+                    }
+
+                    if(selectbox == false)
+                        JOptionPane.showMessageDialog(panel1, "The total price is Php " + String.format("%.2f", price));
+            }
+        });
+    }
     public static void main(String[] args) {
         FoodOrderGUI Zane = new FoodOrderGUI();
         Zane.setTitle("Food Ordering System");
