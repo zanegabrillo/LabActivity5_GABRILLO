@@ -19,27 +19,27 @@ public class SimpleCalcGUI extends JFrame {
 
                 try {
 
-                    String input1 = tfNumber1.getText();
-                    int inputNum1 = Integer.parseInt(input1);
+                    String one = tfNumber1.getText();
+                    int iNumOne = Integer.parseInt(one);
 
-                    String input2 = tfNumber2.getText();
-                    int inputNum2 = Integer.parseInt(input2);
+                    String two = tfNumber2.getText();
+                    int iNumTwo = Integer.parseInt(two);
                     int equation = 0;
                     String operator = (String) cbOperations.getSelectedItem();
 
 
                     switch (operator) {
                         case "+":
-                            equation = inputNum1 + inputNum2;
+                            equation = iNumOne + iNumTwo;
                             break;
                         case "-":
-                            equation = inputNum1 - inputNum2;
+                            equation = iNumOne - iNumTwo;
                             break;
                         case "*":
-                            equation = inputNum1 * inputNum2;
+                            equation = iNumOne * iNumTwo;
                             break;
                         case "/":
-                            equation = inputNum1 / inputNum2;
+                            equation = iNumOne / iNumTwo;
                             break;
                     }
                     lblResult.setText(Integer.toString(equation));
