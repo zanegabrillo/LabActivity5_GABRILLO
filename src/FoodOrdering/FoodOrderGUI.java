@@ -21,7 +21,7 @@ public class FoodOrderGUI extends JFrame{
     public FoodOrderGUI(){
         btnOrder.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-
+                try {
                     ButtonGroup GR = new ButtonGroup();
                     GR.add(rbNone);
                     GR.add(rb5);
@@ -87,9 +87,14 @@ public class FoodOrderGUI extends JFrame{
                     }
 
                     if(selectbox == false) {
+                        throw new Exception("Input Something");
                     }
                     JOptionPane.showMessageDialog(panel1, "The total price is Php " + String.format("%.2f", price));
                 }
+                catch (Exception g) {
+                    JOptionPane.showMessageDialog(null,g.getMessage());
+                }
+            }
         });
     }
     public static void main(String[] args) {
