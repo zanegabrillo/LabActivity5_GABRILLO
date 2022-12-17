@@ -16,6 +16,9 @@ public class SimpleCalcGUI extends JFrame {
 
         btnCompute.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
+
+                try {
+
                     String input1 = tfNumber1.getText();
                     int inputNum1 = Integer.parseInt(input1);
 
@@ -40,7 +43,13 @@ public class SimpleCalcGUI extends JFrame {
                             break;
                     }
                     lblResult.setText(Integer.toString(equation));
-
+                }catch(NumberFormatException f){
+                    JOptionPane.showMessageDialog(null, "Wrong input!");
+                }catch(NullPointerException h) {
+                    JOptionPane.showMessageDialog(null, "Wrong input!");
+                }catch(ArithmeticException g){
+                    JOptionPane.showMessageDialog(null, "Cannot divide zero!");
+                }
             }
         });
     }
@@ -49,7 +58,7 @@ public class SimpleCalcGUI extends JFrame {
         SimpleCalcGUI Zane = new SimpleCalcGUI();
         Zane.setTitle("Simple Calculator");
         Zane.setContentPane(Zane.panel1);
-        Zane.setSize(1280, 720);
+        Zane.setSize(1300, 800);
         Zane.setDefaultCloseOperation(EXIT_ON_CLOSE);
         Zane.setVisible(true);
         Zane.lblResult.setEditable(false);
