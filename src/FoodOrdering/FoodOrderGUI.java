@@ -22,11 +22,11 @@ public class FoodOrderGUI extends JFrame{
         btnOrder.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
 
-                    ButtonGroup group = new ButtonGroup();
-                    group.add(rbNone);
-                    group.add(rb5);
-                    group.add(rb10);
-                    group.add(rb15);
+                    ButtonGroup GR = new ButtonGroup();
+                    GR.add(rbNone);
+                    GR.add(rb5);
+                    GR.add(rb10);
+                    GR.add(rb15);
 
                     boolean selectbox = false;
                     double price = 0;
@@ -86,9 +86,10 @@ public class FoodOrderGUI extends JFrame{
 
                     }
 
-                    if(selectbox == false)
-                        JOptionPane.showMessageDialog(panel1, "The total price is Php " + String.format("%.2f", price));
-            }
+                    if(selectbox == false) {
+                    }
+                    JOptionPane.showMessageDialog(panel1, "The total price is Php " + String.format("%.2f", price));
+                }
         });
     }
     public static void main(String[] args) {
