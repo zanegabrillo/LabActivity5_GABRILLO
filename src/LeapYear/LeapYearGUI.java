@@ -13,11 +13,11 @@ public class LeapYearGUI extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 try {
                     String IYear = tfYear.getText();
-                    int year = Integer.parseInt(IYear);
-                    if (((year % 4 == 0) && (year % 100!= 0)) || (year%400 == 0)){
+                    int Tuig = Integer.parseInt(IYear);
+                    if (((Tuig % 4 == 0) && (Tuig % 100!= 0)) || (Tuig%400 == 0)){
                         JOptionPane.showMessageDialog(panel1, "Leap Year");
                     }
-                    if (year < 0) {
+                    if (Tuig < 0) {
                         throw new IllegalArgumentException("Years not be negative");
                     }
                     else {
